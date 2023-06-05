@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[45,)"
+license="MIT License"
+[[mods]]
+modId="xtutorial"
+version="${file.jarVersion}"
+displayName="XTutorial"
+logoFile="examplemod.png"
+credits=""
+authors="grandmen123"
+displayTest="MATCH_VERSION"
+description='''
+This is a Tutorial Run at making Mods for Minecraft Java.
+'''
+
+[[dependencies.xtutorial]]
+    modId="forge"
+    mandatory=true
+    versionRange="[45,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.xtutorial]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.4,1.20)"
+    ordering="NONE"
+    side="BOTH"
