@@ -1,5 +1,6 @@
 package com.grandmen123.xtutorial;
 
+import com.grandmen123.xtutorial.block.ModBlocks;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
@@ -23,6 +24,7 @@ public class XTutorial {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -37,6 +39,11 @@ public class XTutorial {
         if (event.getTab() == ModCreativeModeTabs.XTUTORIAL_TAB) {
             event.accept(ModItems.BLACK_OPAL);
             event.accept(ModItems.RAW_BLACK_OPAL);
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+            event.accept(ModBlocks.BLACK_OPAL_ORE);
+            event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
+            event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
+            event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
         }
     }
 

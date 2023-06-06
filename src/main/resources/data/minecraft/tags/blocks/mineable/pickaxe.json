@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "xtutorial:black_opal_ore",
+    "xtutorial:black_opal_block",
+    "xtutorial:deepslate_black_opal_ore",
+    "xtutorial:netherrack_black_opal_ore",
+    "xtutorial:endstone_black_opal_ore"
+  ]
+}
