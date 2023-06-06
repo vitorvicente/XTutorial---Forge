@@ -1,0 +1,6 @@
+// 1.19.4	2023-06-06T21:46:58.7939977	Loot Tables
+0bccf61b44a030aa22f02bf00ba9840cdd6eea3c data/xtutorial/loot_tables/blocks/black_opal_block.json
+831f060cd5bdc8f84e75af25402a5fd52aa89c7e data/xtutorial/loot_tables/blocks/black_opal_ore.json
+8a686954a1b7a9d155563fc0c18cd7fdbc4aabb9 data/xtutorial/loot_tables/blocks/deepslate_black_opal_ore.json
+9c8f577a73d3fdf53f9852a14f02b9b0c8ca6d30 data/xtutorial/loot_tables/blocks/endstone_black_opal_ore.json
+b1165b3c63e8822ff4212906f1281573204933b7 data/xtutorial/loot_tables/blocks/netherrack_black_opal_ore.json
