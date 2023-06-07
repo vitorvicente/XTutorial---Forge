@@ -18,13 +18,23 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.BLACK_OPAL_BLOCK.get());
         add(ModBlocks.BLACK_OPAL_ORE.get(),
-            (create) -> createOreDrop(ModBlocks.BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+            (block) -> createOreDrop(ModBlocks.BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
         add(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE.get(),
-            (create) -> createOreDrop(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+            (block) -> createOreDrop(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
         add(ModBlocks.NETHERRACK_BLACK_OPAL_ORE.get(),
-            (create) -> createOreDrop(ModBlocks.NETHERRACK_BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+            (block) -> createOreDrop(ModBlocks.NETHERRACK_BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
         add(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(),
-            (create) -> createOreDrop(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+            (block) -> createOreDrop(ModBlocks.ENDSTONE_BLACK_OPAL_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+
+        dropSelf(ModBlocks.EBONY_LOG.get());
+        dropSelf(ModBlocks.EBONY_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_EBONY_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_EBONY_WOOD.get());
+        dropSelf(ModBlocks.EBONY_PLANKS.get());
+        dropSelf(ModBlocks.EBONY_SAPLING.get());
+
+        add(ModBlocks.EBONY_LEAVES.get(),
+            (block) -> createLeavesDrops(block, ModBlocks.EBONY_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override

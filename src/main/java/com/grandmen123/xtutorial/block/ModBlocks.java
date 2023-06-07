@@ -1,14 +1,18 @@
 package com.grandmen123.xtutorial.block;
 
 import com.grandmen123.xtutorial.XTutorial;
+import com.grandmen123.xtutorial.block.custom.ModFlammableRotatedPillarBlock;
 import com.grandmen123.xtutorial.item.ModItems;
+import com.grandmen123.xtutorial.worldgen.tree.EbonyTreeGrower;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -57,8 +61,67 @@ public class ModBlocks {
                                                                 .copy(BLACK_OPAL_ORE.get())
                                                                 .color(MaterialColor.SAND)
                                                                 .strength(3.0F, 9.0F),
-                                                        UniformInt.of(2
-                                                                , 6)));
+                                                        UniformInt.of(2, 6)));
+
+    public static final RegistryObject<Block> EBONY_LOG =
+            registerBlock("ebony_log", () -> new ModFlammableRotatedPillarBlock(
+                    BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(5f)));
+    public static final RegistryObject<Block> EBONY_WOOD =
+            registerBlock("ebony_wood", () -> new ModFlammableRotatedPillarBlock(
+                    BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(5f)));
+    public static final RegistryObject<Block> STRIPPED_EBONY_LOG =
+            registerBlock("stripped_ebony_log", () -> new ModFlammableRotatedPillarBlock(
+                    BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(5f)));
+    public static final RegistryObject<Block> STRIPPED_EBONY_WOOD =
+            registerBlock("stripped_ebony_wood", () -> new ModFlammableRotatedPillarBlock(
+                    BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(5f)));
+
+    public static final RegistryObject<Block> EBONY_PLANKS =
+            registerBlock("ebony_planks",
+                          () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                              @Override
+                              public boolean isFlammable(BlockState state, BlockGetter level,
+                                                         BlockPos pos, Direction direction) {
+                                  return true;
+                              }
+
+                              @Override
+                              public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos,
+                                                            Direction direction) {
+                                  return 5;
+                              }
+
+                              @Override
+                              public int getFlammability(BlockState state, BlockGetter level, BlockPos pos,
+                                                         Direction direction) {
+                                  return 5;
+                              }
+                          });
+
+    public static final RegistryObject<Block> EBONY_LEAVES =
+            registerBlock("ebony_leaves",
+                          () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                              @Override
+                              public boolean isFlammable(BlockState state, BlockGetter level,
+                                                         BlockPos pos, Direction direction) {
+                                  return true;
+                              }
+
+                              @Override
+                              public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos,
+                                                            Direction direction) {
+                                  return 30;
+                              }
+
+                              @Override
+                              public int getFlammability(BlockState state, BlockGetter level, BlockPos pos,
+                                                         Direction direction) {
+                                  return 60;
+                              }
+                          });
+
+    public static final RegistryObject<Block> EBONY_SAPLING = registerBlock("ebony_sapling", () ->
+            new SaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
 
     public static void register(IEventBus eventBus) {

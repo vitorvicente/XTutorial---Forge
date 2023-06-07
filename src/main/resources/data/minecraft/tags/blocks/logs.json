@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "xtutorial:ebony_log",
+    "xtutorial:ebony_wood",
+    "xtutorial:stripped_ebony_log",
+    "xtutorial:stripped_ebony_wood"
+  ]
+}

@@ -6,5 +6,14 @@
   "block.xtutorial.deepslate_black_opal_ore": "Deepslate Black Opal Ore",
   "block.xtutorial.netherrack_black_opal_ore": "Netherrack Black Opal Ore",
   "block.xtutorial.endstone_black_opal_ore": "Endstone Black Opal Ore",
+
+  "block.xtutorial.ebony_log": "Ebony Log",
+  "block.xtutorial.stripped_ebony_log": "Stripped Ebony Log",
+  "block.xtutorial.ebony_wood": "Ebony Wood",
+  "block.xtutorial.stripped_ebony_wood": "Stripped Ebony Wood",
+  "block.xtutorial.ebony_planks": "Ebony Planks",
+  "block.xtutorial.ebony_leaves": "Ebony Leaves",
+  "block.xtutorial.ebony_sapling": "Ebony Sapling",
+
   "creativemodetab.xtutorial_tab": "XTutorial"
 }
