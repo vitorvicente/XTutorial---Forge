@@ -1,8 +1,11 @@
 package com.grandmen123.xtutorial;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.entity.ModEntities;
+import com.grandmen123.xtutorial.entity.client.TigerRenderer;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -25,6 +28,7 @@ public class XTutorial {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -51,6 +55,7 @@ public class XTutorial {
             event.accept(ModBlocks.EBONY_PLANKS);
             event.accept(ModBlocks.EBONY_LEAVES);
             event.accept(ModBlocks.EBONY_SAPLING);
+            event.accept(ModItems.TIGER_SPAWN_EGG);
         }
     }
 
@@ -58,7 +63,7 @@ public class XTutorial {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.TIGER.get(), TigerRenderer::new);
         }
     }
 }
