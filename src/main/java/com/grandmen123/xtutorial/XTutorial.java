@@ -1,10 +1,13 @@
 package com.grandmen123.xtutorial;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.block.entity.ModBlockEntities;
+import com.grandmen123.xtutorial.block.entity.client.AnimatedBlockRenderer;
 import com.grandmen123.xtutorial.entity.ModEntities;
 import com.grandmen123.xtutorial.entity.client.TigerRenderer;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,6 +19,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 @Mod(XTutorial.MOD_ID)
 public class XTutorial {
@@ -29,6 +33,9 @@ public class XTutorial {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+
+        GeckoLib.initialize();
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -57,6 +64,7 @@ public class XTutorial {
             event.accept(ModBlocks.EBONY_SAPLING);
             event.accept(ModItems.TIGER_SPAWN_EGG);
             event.accept(ModItems.ANIMATED_ITEM);
+            event.accept(ModItems.ANIMATED_BLOCK_ITEM);
         }
     }
 
@@ -65,6 +73,7 @@ public class XTutorial {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.TIGER.get(), TigerRenderer::new);
+            BlockEntityRenderers.register(ModBlockEntities.ANIMATED_BLOCK_ENTITY.get(), AnimatedBlockRenderer::new);
         }
     }
 }

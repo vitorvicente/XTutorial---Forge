@@ -1,7 +1,9 @@
 package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
+import com.grandmen123.xtutorial.block.ModBlocks;
 import com.grandmen123.xtutorial.entity.ModEntities;
+import com.grandmen123.xtutorial.item.custom.AnimatedBlockItem;
 import com.grandmen123.xtutorial.item.custom.AnimatedItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -23,8 +25,11 @@ public class ModItems {
                            () -> new ForgeSpawnEggItem(ModEntities.TIGER, 0xD57e36, 0x100000,
                                                        new Item.Properties()));
 
-    public static final RegistryObject<Item> ANIMATED_ITEM = ITEMS.register("animated_item",
-                                                                            () -> new AnimatedItem(new Item.Properties()));
+    public static final RegistryObject<Item> ANIMATED_ITEM = ITEMS.register("animated_item", () ->
+            new AnimatedItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> ANIMATED_BLOCK_ITEM = ITEMS.register("animated_block", () ->
+            new AnimatedBlockItem(ModBlocks.ANIMATED_BLOCK.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

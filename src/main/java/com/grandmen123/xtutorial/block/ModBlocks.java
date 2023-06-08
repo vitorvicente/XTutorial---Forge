@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.block;
 
 import com.grandmen123.xtutorial.XTutorial;
+import com.grandmen123.xtutorial.block.custom.AnimatedBlock;
 import com.grandmen123.xtutorial.block.custom.ModFlammableRotatedPillarBlock;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.grandmen123.xtutorial.worldgen.tree.EbonyTreeGrower;
@@ -122,6 +123,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> EBONY_SAPLING = registerBlock("ebony_sapling", () ->
             new SaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> ANIMATED_BLOCK = BLOCKS.register("animated_block", () ->
+            new AnimatedBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()));
 
 
     public static void register(IEventBus eventBus) {

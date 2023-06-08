@@ -1,4 +1,5 @@
-// 1.19.4	2023-06-07T12:49:32.743364	Loot Tables
+// 1.19.4	2023-06-08T11:43:50.4914386	Loot Tables
+3fba57a72bfe1dd4889288b0d31dd144077ee28b data/xtutorial/loot_tables/blocks/animated_block.json
 0bccf61b44a030aa22f02bf00ba9840cdd6eea3c data/xtutorial/loot_tables/blocks/black_opal_block.json
 831f060cd5bdc8f84e75af25402a5fd52aa89c7e data/xtutorial/loot_tables/blocks/black_opal_ore.json
 8a686954a1b7a9d155563fc0c18cd7fdbc4aabb9 data/xtutorial/loot_tables/blocks/deepslate_black_opal_ore.json
