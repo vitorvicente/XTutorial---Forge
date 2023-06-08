@@ -3,8 +3,10 @@ package com.grandmen123.xtutorial.item;
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.ModBlocks;
 import com.grandmen123.xtutorial.entity.ModEntities;
+import com.grandmen123.xtutorial.item.custom.AmethystArmorItem;
 import com.grandmen123.xtutorial.item.custom.AnimatedBlockItem;
 import com.grandmen123.xtutorial.item.custom.AnimatedItem;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,6 +32,15 @@ public class ModItems {
 
     public static final RegistryObject<Item> ANIMATED_BLOCK_ITEM = ITEMS.register("animated_block", () ->
             new AnimatedBlockItem(ModBlocks.ANIMATED_BLOCK.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet", () ->
+            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate", () ->
+            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings", () ->
+            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots", () ->
+            new AmethystArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

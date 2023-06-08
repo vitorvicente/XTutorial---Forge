@@ -20,5 +20,10 @@
   "item.xtutorial.animated_item": "Animated Item",
   "block.xtutorial.animated_block": "Animated Block",
 
+  "item.xtutorial.amethyst_helmet": "Amethyst Helmet",
+  "item.xtutorial.amethyst_chestplate": "Amethyst Chestplate",
+  "item.xtutorial.amethyst_leggings": "Amethyst Leggings",
+  "item.xtutorial.amethyst_boots": "Amethyst Boots",
+
   "creativemodetab.xtutorial_tab": "XTutorial"
 }

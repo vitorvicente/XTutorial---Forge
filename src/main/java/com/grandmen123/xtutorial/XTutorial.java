@@ -65,6 +65,11 @@ public class XTutorial {
             event.accept(ModItems.TIGER_SPAWN_EGG);
             event.accept(ModItems.ANIMATED_ITEM);
             event.accept(ModItems.ANIMATED_BLOCK_ITEM);
+
+            event.accept(ModItems.AMETHYST_HELMET);
+            event.accept(ModItems.AMETHYST_CHESTPLATE);
+            event.accept(ModItems.AMETHYST_LEGGINGS);
+            event.accept(ModItems.AMETHYST_BOOTS);
         }
     }
 
