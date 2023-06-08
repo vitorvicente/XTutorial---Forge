@@ -56,6 +56,7 @@ public class XTutorial {
             event.accept(ModBlocks.EBONY_LEAVES);
             event.accept(ModBlocks.EBONY_SAPLING);
             event.accept(ModItems.TIGER_SPAWN_EGG);
+            event.accept(ModItems.ANIMATED_ITEM);
         }
     }
 
