@@ -27,6 +27,9 @@ public class ModSounds {
                                                                                   ModSounds.ANIMATED_BLOCK_HIT,
                                                                                   ModSounds.ANIMATED_BLOCK_WALK);
 
+    public static final RegistryObject<SoundEvent> MUSIC_BOX = registerSoundEvent("music_box");
+
+
 
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {

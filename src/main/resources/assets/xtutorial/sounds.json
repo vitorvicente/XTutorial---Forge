@@ -28,5 +28,14 @@
     "sounds": [
       "xtutorial:cool_sound"
     ]
+  },
+  "music_box": {
+    "subtitle": "sounds.xtutorial.music_box",
+    "sounds": [
+      {
+        "name": "xtutorial:music_box",
+        "stream": true
+      }
+    ]
   }
 }

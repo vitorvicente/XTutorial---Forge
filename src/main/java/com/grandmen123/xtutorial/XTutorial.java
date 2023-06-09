@@ -57,6 +57,7 @@ public class XTutorial {
             event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
             event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
             event.accept(ModBlocks.ENDSTONE_BLACK_OPAL_ORE);
+
             event.accept(ModBlocks.EBONY_LOG);
             event.accept(ModBlocks.EBONY_WOOD);
             event.accept(ModBlocks.STRIPPED_EBONY_LOG);
@@ -64,7 +65,9 @@ public class XTutorial {
             event.accept(ModBlocks.EBONY_PLANKS);
             event.accept(ModBlocks.EBONY_LEAVES);
             event.accept(ModBlocks.EBONY_SAPLING);
+
             event.accept(ModItems.TIGER_SPAWN_EGG);
+
             event.accept(ModItems.ANIMATED_ITEM);
             event.accept(ModItems.ANIMATED_BLOCK_ITEM);
 
@@ -72,6 +75,8 @@ public class XTutorial {
             event.accept(ModItems.AMETHYST_CHESTPLATE);
             event.accept(ModItems.AMETHYST_LEGGINGS);
             event.accept(ModItems.AMETHYST_BOOTS);
+
+            event.accept(ModItems.MUSIC_BOX_MUSIC_DISC);
         }
     }
 
