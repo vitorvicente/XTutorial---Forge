@@ -6,6 +6,7 @@ import com.grandmen123.xtutorial.block.entity.client.AnimatedBlockRenderer;
 import com.grandmen123.xtutorial.entity.ModEntities;
 import com.grandmen123.xtutorial.entity.client.TigerRenderer;
 import com.grandmen123.xtutorial.item.ModItems;
+import com.grandmen123.xtutorial.sound.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -34,6 +35,7 @@ public class XTutorial {
         ModBlocks.register(modEventBus);
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         GeckoLib.initialize();
 

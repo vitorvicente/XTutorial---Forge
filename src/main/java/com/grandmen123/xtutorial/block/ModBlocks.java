@@ -4,6 +4,7 @@ import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.custom.AnimatedBlock;
 import com.grandmen123.xtutorial.block.custom.ModFlammableRotatedPillarBlock;
 import com.grandmen123.xtutorial.item.ModItems;
+import com.grandmen123.xtutorial.sound.ModSounds;
 import com.grandmen123.xtutorial.worldgen.tree.EbonyTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -125,7 +126,9 @@ public class ModBlocks {
             new SaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> ANIMATED_BLOCK = BLOCKS.register("animated_block", () ->
-            new AnimatedBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()));
+            new AnimatedBlock(
+                    BlockBehaviour.Properties.of(Material.STONE).sound(ModSounds.ANIMATED_BLOCK_SOUNDS).strength(1f)
+                                             .noOcclusion()));
 
 
     public static void register(IEventBus eventBus) {
